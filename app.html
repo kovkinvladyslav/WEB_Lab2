@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-secondary">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="app.html">
+      <img src="calcpic.svg" width="40" height="40" alt="Calculator">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="app.html">App</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container d-flex flex-column align-items-center py-4">
+
+  <div class="btn-group mb-4" role="group">
+    <button type="button" class="btn btn-outline-dark active">Normal</button>
+    <button type="button" class="btn btn-outline-dark">Programmer</button>
+  </div>
+
+  <div class="bg-dark rounded shadow px-3 py-3 w-100" id="calculator">
+    <input type="text" class="form-control text-end mb-3" placeholder="0" readonly>
+
+    <div class="row g-2 mb-2">
+      <div class="col-3"><button class="btn btn-light w-100">7</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">8</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">9</button></div>
+      <div class="col-3"><button class="btn btn-secondary w-100">÷</button></div>
+    </div>
+    <div class="row g-2 mb-2">
+      <div class="col-3"><button class="btn btn-light w-100">4</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">5</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">6</button></div>
+      <div class="col-3"><button class="btn btn-secondary w-100">×</button></div>
+    </div>
+    <div class="row g-2 mb-2">
+      <div class="col-3"><button class="btn btn-light w-100">1</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">2</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">3</button></div>
+      <div class="col-3"><button class="btn btn-secondary w-100">−</button></div>
+    </div>
+    <div class="row g-2 mb-2">
+      <div class="col-3"><button class="btn btn-light w-100">0</button></div>
+      <div class="col-3"><button class="btn btn-light w-100">.</button></div>
+      <div class="col-3"><button class="btn btn-success w-100">=</button></div>
+      <div class="col-3"><button class="btn btn-secondary w-100">+</button></div>
+    </div>
+
+    <div class="row g-2 mt-4">
+      <div class="col"><button class="btn btn-outline-light w-100">AND</button></div>
+      <div class="col"><button class="btn btn-outline-light w-100">OR</button></div>
+      <div class="col"><button class="btn btn-outline-light w-100">XOR</button></div>
+      <div class="col"><button class="btn btn-outline-light w-100">NOT</button></div>
+    </div>
+    <div class="row g-2 mt-2">
+      <div class="col"><button class="btn btn-outline-light w-100">BIN</button></div>
+      <div class="col"><button class="btn btn-outline-light w-100">DEC</button></div>
+      <div class="col"><button class="btn btn-outline-light w-100">HEX</button></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="container-fluid bg-dark text-center py-3 text-secondary small">
+  © 2025 Всі права захищено.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
