@@ -1,8 +1,7 @@
-import UserList from './model/UsersList'
-import Controller from './controller/ProfilePageController';
-import ProfileView from './view/ProfilePageView'
+import UsersList from './model/UsersList.js';
+import ProfileView from './view/ProfilePageView.js';
+import ProfileController from './controller/ProfilePageController.js';
 
-let UserListModel = new UserList();
-let ProfilePageView = new ProfileView();
-let controller = new Controller(UserListModel, ProfilePageView);
-
+const usersList = new UsersList();
+const view = new ProfileView();
+const controller = new ProfileController(usersList, view);

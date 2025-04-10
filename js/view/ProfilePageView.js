@@ -1,35 +1,15 @@
-export default class ProfilePageView {
-    constructor(userModel){
-        this.userModel = userModel;
+export default class ProfileView {
+    constructor() {
+        this.fullNameEl = document.querySelector('#fullName');
+        this.emailEl = document.querySelector('#email');
+        this.genderEl = document.querySelector('#gender');
+        this.birthDateEl = document.querySelector('#birthDate');
     }
-    toHtml(){
-        return `
-        <tbody>
-        <tr>
-          <th scope="row">Full Name</th>
-          <td>
-          ${this.userModel.FullName}
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Email</th>
-          <td>
-          ${this.userModel.userEmail}
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Gender</th>
-          <td>
-            ${this.userModel.userGender}
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Date of Birth</th>
-          <td>
-            ${this.userModel.userBirthDate}
-          </td>
-        </tr>
-      </tbody>`;
-        
+
+    renderUser(user) {
+        this.fullNameEl.textContent = user.fullName;
+        this.emailEl.textContent = user.email;
+        this.genderEl.textContent = user.gender;
+        this.birthDateEl.textContent = user.birthDate;
     }
 }
