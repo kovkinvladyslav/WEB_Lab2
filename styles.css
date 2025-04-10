@@ -18,3 +18,7 @@ body{
 #profileTable{
     display: none;
 }
+
+.programmer-buttons{
+    display: none;
+}

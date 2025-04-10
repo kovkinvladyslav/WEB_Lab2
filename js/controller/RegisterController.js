@@ -21,6 +21,5 @@ export default class RegistrationController {
             this.RegisterView.redirectToLogin();
         }
 
-
     }
 }

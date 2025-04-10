@@ -33,13 +33,22 @@
 
 <div class="container d-flex flex-column align-items-center py-4">
 
-  <div class="btn-group mb-4" role="group">
+  <div class="btn-group mb-4" role="group" id="change-mode">
     <button type="button" class="btn btn-outline-dark active">Normal</button>
     <button type="button" class="btn btn-outline-dark">Programmer</button>
   </div>
 
   <div class="bg-dark rounded shadow px-3 py-3 w-100" id="calculator">
     <input type="text" class="form-control text-end mb-3" placeholder="0" readonly>
+
+    <div class="row g-2 mb-2 programmer-buttons">
+      <div class="col-2"><button class="btn btn-info w-100">A</button></div>
+      <div class="col-2"><button class="btn btn-info w-100">B</button></div>
+      <div class="col-2"><button class="btn btn-info w-100">C</button></div>
+      <div class="col-2"><button class="btn btn-info w-100">D</button></div>
+      <div class="col-2"><button class="btn btn-info w-100">E</button></div>
+      <div class="col-2"><button class="btn btn-info w-100">F</button></div>
+    </div>
 
     <div class="row g-2 mb-2">
       <div class="col-3"><button class="btn btn-light w-100">7</button></div>
@@ -66,13 +75,13 @@
       <div class="col-3"><button class="btn btn-secondary w-100">+</button></div>
     </div>
 
-    <div class="row g-2 mt-4">
+    <div class="row g-2 mt-4 programmer-buttons">
       <div class="col"><button class="btn btn-outline-light w-100">AND</button></div>
       <div class="col"><button class="btn btn-outline-light w-100">OR</button></div>
       <div class="col"><button class="btn btn-outline-light w-100">XOR</button></div>
       <div class="col"><button class="btn btn-outline-light w-100">NOT</button></div>
     </div>
-    <div class="row g-2 mt-2">
+    <div class="row g-2 mt-2 programmer-buttons">
       <div class="col"><button class="btn btn-outline-light w-100">BIN</button></div>
       <div class="col"><button class="btn btn-outline-light w-100">DEC</button></div>
       <div class="col"><button class="btn btn-outline-light w-100">HEX</button></div>
@@ -86,5 +95,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="./js/AppMain.js"></script>
 </body>
 </html>
