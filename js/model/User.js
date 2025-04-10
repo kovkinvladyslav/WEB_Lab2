@@ -1,9 +1,16 @@
-export default class User{
-    constructor(userFullName, userEmail, userGender, userPassword, userBirthDate){
-        this.userFullName = userFullName;
-        this.userEmail = userEmail;
-        this.userGender = userGender;
-        this.userPassword = userPassword;
-        this.userBirthDate = userBirthDate;
+import UsersList from "./UsersList.js";
+
+export default class User {
+    #password
+    constructor(email, password, gender, birthDate, fullName){
+        this.email = email || null;
+        this.#password = password || null;
+        this.gender = gender || null;
+        this.birthDate = birthDate || null;
+        this.fullName = fullName || null;
+    }
+
+    isValid(usersList){
+        return usersList.isInUsersList(new User(this.email, this.#password))
     }
 }

@@ -1,18 +1,21 @@
-export default class userListModel {
-    constructor() {
-        this.users = [];
-        this.onChangeCallback = null;
-        this.currentUser = null;
+import User from './User.js';
+
+export default class UsersList {
+
+    addUser(user) {
+        localStorage.setItem(user.email, JSON.stringify(user));
     }
 
-    add(user){
-        this.users.push(user);
+    isInUsersList(userToCheck){
+        return JSON.parse(localStorage.getItem(userToCheck))
     }
-    setCurrentUser(userEmail, userPassword) {
-        this.currentUser = this.users.find(user =>
-            user.userEmail === userEmail && user.userPassword === userPassword
-        );
-        return this.currentUser;
+
+    setCurrentUser(newCurrentUser) {
+        localStorage.setItem('currentUser', JSON.stringify(newCurrentUser))
+    }
+
+    getCurrentUser() {
+        return JSON.parse(localStorage.getItem('currentUser'));
     }
     
 }
