@@ -6,7 +6,7 @@ export default class ProfileController {
         const currentUser = this.usersList.getCurrentUser();
         if (currentUser) {
             this.view.renderUser(currentUser);
-            document.querySelector('#profileTable').style.display = 'table';
+            document.querySelector('#profileTable').classList.remove('hidden');
         } else {
             window.location.href = '../../index.html'; 
         }

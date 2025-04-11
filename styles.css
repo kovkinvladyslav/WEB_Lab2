@@ -15,10 +15,6 @@ body{
     
 }
 
-#profileTable{
-    display: none;
-}
-
-.programmer-buttons{
+.hidden{
     display: none;
 }
