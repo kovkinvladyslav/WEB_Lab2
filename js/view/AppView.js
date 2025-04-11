@@ -1,8 +1,6 @@
 export default class View{
     constructor(){
         this.keys = document.querySelectorAll('#calculator button, #change-mode button');
-        this.operators = ['+', '-', 'x', '/']
-        this.programmerOperators = ['AND', 'OR', 'XOR', 'NOT', 'BIN', 'DEC', 'HEX']
         this.addOnclickEvents()
         this.changeModeKeys = document.querySelectorAll('#change-mode button')
         this.controllerOnChangeMode = null
@@ -21,6 +19,19 @@ export default class View{
             })
             
         }
+    }
+
+    updateButtonsHighlight(base){
+        const baseButtons = document.querySelectorAll('.programmer-buttons .row:last-child .btn');
+        baseButtons.forEach(button => {
+            if (button.innerHTML === base) {
+              button.classList.add('active');
+            } else {
+              button.classList.remove('active');
+            }
+          });
+          
+        
     }
 
     setControllerOnChangeMode(controllerOnChangeMode){

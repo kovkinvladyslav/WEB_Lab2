@@ -12,6 +12,7 @@ export default class Controller {
     onChangeCallback(){
        this.ViewApp.updateMode(this.ModelApp.mode)
        this.ViewApp.updateDisplay(this.ModelApp.display)
+       this.ViewApp.updateButtonsHighlight(this.ModelApp.base)
     }
 
 
@@ -20,12 +21,15 @@ export default class Controller {
     }
 
     ChangeMode(mode){
-        this.ModelApp.mode = mode.innerHTML
-        this.ViewApp.clearActiveModeButtons()
-        if(!mode.classList.contains('active')){
-            mode.classList.add('active')
-            this.ModelApp.mode = mode.innerHTML
+        const modeName = mode.innerHTML;
+        
+        this.ViewApp.clearActiveModeButtons();
+        
+        this.ModelApp.mode = modeName;
+        mode.classList.add('active');
+        
+        if(modeName === 'Normal'){
+            this.ModelApp.setNewBase('DEC')
         }
-        return
     }
 }
