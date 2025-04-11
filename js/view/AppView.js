@@ -6,10 +6,29 @@ export default class View{
         this.addOnclickEvents()
         this.changeModeKeys = document.querySelectorAll('#change-mode button')
         this.controllerOnChangeMode = null
+        this.controllerOnInput = null
+    }
+
+    updateMode(mode){
+        let programmerKeys = document.querySelectorAll('.programmer-buttons')
+        if(mode === 'Normal'){
+            programmerKeys.forEach(buttons => {
+                buttons.classList.add('hidden')
+            })
+        } else if (mode === 'Programmer') {
+            programmerKeys.forEach(buttons => {
+                buttons.classList.remove('hidden')
+            })
+            
+        }
     }
 
     setControllerOnChangeMode(controllerOnChangeMode){
         this.controllerOnChangeMode = controllerOnChangeMode
+    }
+
+    setControllerOnInput(controllerOnInput){
+        this.controllerOnInput = controllerOnInput
     }
 
     clearActiveModeButtons() {
@@ -18,6 +37,10 @@ export default class View{
         });
     }
     
+    updateDisplay(displayVal){
+        document.querySelector('#calculator').firstElementChild.value = displayVal
+        console.log(displayVal)
+    }
 
     addOnclickEvents(){
         for(let i = 0; i < this.keys.length; i++){
@@ -29,9 +52,9 @@ export default class View{
         if(e.target.parentNode.id === 'change-mode'){
             this.controllerOnChangeMode(e.target)
             return
+        } else {
+            this.controllerOnInput(e.target.innerHTML)
         }
-        console.log(e.target.parentNode.id)
-        return
     }
 
 }
