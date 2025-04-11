@@ -41,6 +41,15 @@
   <div class="bg-dark rounded shadow px-3 py-3 w-100" id="calculator">
     <input type="text" class="form-control text-end mb-3" placeholder="0" readonly>
 
+    <div class="row g-2 mb-2">
+      <div class="col-6">
+        <button class="btn btn-danger w-100" id="clear-btn">C</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-warning w-100" id="backspace-btn">⌫</button>
+      </div>
+    </div>    
+
     <div class="row g-2 mb-2 programmer-buttons">
       <div class="col-2"><button class="btn btn-info w-100">A</button></div>
       <div class="col-2"><button class="btn btn-info w-100">B</button></div>
@@ -74,19 +83,24 @@
       <div class="col-3"><button class="btn btn-success w-100">=</button></div>
       <div class="col-3"><button class="btn btn-secondary w-100">+</button></div>
     </div>
+    <div class="programmer-buttons">
 
-    <div class="row g-2 mt-4 programmer-buttons">
-      <div class="col"><button class="btn btn-outline-light w-100">AND</button></div>
-      <div class="col"><button class="btn btn-outline-light w-100">OR</button></div>
-      <div class="col"><button class="btn btn-outline-light w-100">XOR</button></div>
-      <div class="col"><button class="btn btn-outline-light w-100">NOT</button></div>
+
+
+      <div class="row g-2 mt-4">
+        <div class="col"><button class="btn btn-outline-light w-100">AND</button></div>
+        <div class="col"><button class="btn btn-outline-light w-100">OR</button></div>
+        <div class="col"><button class="btn btn-outline-light w-100">XOR</button></div>
+        <div class="col"><button class="btn btn-outline-light w-100">NOT</button></div>
+      </div>
+      <div class="row g-2 mt-2">
+        <div class="col"><button class="btn btn-outline-light w-100">BIN</button></div>
+        <div class="col"><button class="btn btn-outline-light w-100">DEC</button></div>
+        <div class="col"><button class="btn btn-outline-light w-100">HEX</button></div>
+      </div>
     </div>
-    <div class="row g-2 mt-2 programmer-buttons">
-      <div class="col"><button class="btn btn-outline-light w-100">BIN</button></div>
-      <div class="col"><button class="btn btn-outline-light w-100">DEC</button></div>
-      <div class="col"><button class="btn btn-outline-light w-100">HEX</button></div>
     </div>
-  </div>
+    
 
 </div>
 
