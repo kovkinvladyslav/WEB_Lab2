@@ -7,7 +7,8 @@ export default class ProfileController {
             this.view.renderUser(this.usersList.getCurrentUser());
             document.querySelector('#profileTable').classList.remove('hidden');
         } else {
-            window.location.href = '../../index.html'; 
+            const base = window.location.origin + window.location.pathname.split('/').slice(0, 2).join('/');
+            window.location.href = base + '/index.html';
         }
     }
 }
