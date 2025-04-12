@@ -62,7 +62,6 @@ export default class AppView{
     onClick(e){
         if(e.target.parentNode.id === 'change-mode'){
             this.controllerOnChangeMode(e.target)
-            return
         } else {
             this.controllerOnInput(e.target.innerHTML)
         }
