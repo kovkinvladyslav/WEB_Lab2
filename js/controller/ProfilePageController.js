@@ -3,9 +3,8 @@ export default class ProfileController {
         this.usersList = usersList;
         this.view = view;
 
-        const currentUser = this.usersList.getCurrentUser();
-        if (currentUser) {
-            this.view.renderUser(currentUser);
+        if (this.usersList.getCurrentUser()) {
+            this.view.renderUser(this.usersList.getCurrentUser());
             document.querySelector('#profileTable').classList.remove('hidden');
         } else {
             window.location.href = '../../index.html'; 
