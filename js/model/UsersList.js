@@ -18,7 +18,7 @@ export default class UsersList {
         return JSON.parse(localStorage.getItem('currentUser'));
     }
     isValid(user){
-        let storedUser = JSON.parse(localStorage.getItem(this.email)) 
+        let storedUser = JSON.parse(localStorage.getItem(user.email)) 
         if(storedUser != null){
             if(storedUser.password == user.password){
                 user.gender = storedUser.gender
