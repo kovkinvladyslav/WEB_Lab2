@@ -85,13 +85,22 @@ export default class AppModel {
         const baseMap = { 'BIN': 2, 'DEC': 10, 'HEX': 16 };
         const base = baseMap[to];
         const oldbase = baseMap[from]
-        const currentExpr = this.display.replace(/\b[0-9A-F]+\b/gi, (match) => {
+        const currentExpr = this.display
+                        .replace(/AND/g, '&')
+                        .replace(/XOR/g, '^')
+                        .replace(/OR/g, '|')
+                        .replace(/NOT/g, '~')
+                        .replace(/\b[0-9A-F]+\b/gi, (match) => {
             const dec = parseInt(match, oldbase); 
             if (isNaN(dec)) return match;
             return dec.toString(base).toUpperCase();
         })
     
-        this.display = currentExpr;
+        this.display = currentExpr 
+                .replace(/&/g, 'AND')
+                .replace(/\^/g, 'XOR')
+                .replace(/\|/g, 'OR')
+                .replace(/~/g, 'NOT');
     }
     
     setNewBase(btnVal){
