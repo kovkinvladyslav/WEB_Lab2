@@ -1,4 +1,4 @@
-export default class Model {
+export default class AppModel {
     constructor() {
         this.mode = 'Normal'
         this.display = ''

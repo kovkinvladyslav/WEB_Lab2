@@ -1,4 +1,4 @@
-export default class View {
+export default class LoginView {
     constructor(){
         this.loginForm = document.querySelector('#login-form')
         this.emailInput = document.querySelector('#emailAddress')

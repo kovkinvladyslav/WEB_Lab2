@@ -1,7 +1,7 @@
 import User from "../model/User.js";
 import UsersList from "../model/UsersList.js"
 
-export default class Controller {
+export default class LoginController {
     constructor(UsersList, LoginView){
         this.UsersList = UsersList;
         this.LoginView = LoginView;

@@ -1,4 +1,4 @@
-export default class View{
+export default class AppView{
     constructor(){
         this.keys = document.querySelectorAll('#calculator button, #change-mode button');
         this.addOnclickEvents()
