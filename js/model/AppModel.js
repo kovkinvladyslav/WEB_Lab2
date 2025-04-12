@@ -24,7 +24,7 @@ export default class Model {
                     .replace(/OR/g, '|')
                     .replace(/NOT/g, '~')
 
-                console.log(expression)
+                //console.log(expression)
                 let convertedExpr = expression;
                 if (this.mode === 'Programmer') {
                     const baseMap = { 'BIN': 2, 'DEC': 10, 'HEX': 16 };
