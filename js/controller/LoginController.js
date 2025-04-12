@@ -10,7 +10,7 @@ export default class LoginController {
 
     login(email, password){
         const user = new User(email, password);
-        if (user.isValid()) {
+        if (UserList.isValid(user)) {
             this.UsersList.setCurrentUser(user);
             this.LoginView.redirectToApp();
         } else {
